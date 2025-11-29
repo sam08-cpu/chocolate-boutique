@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chocolate Haven - Home</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .hero-section {
+      background: linear-gradient(135deg, #3e2723 0%, #6d4c41 50%, #8d6e63 100%);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: '🍫';
+      position: absolute;
+      font-size: 200px;
+      opacity: 0.1;
+      top: -50px;
+      right: -50px;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .hero-section h2 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      animation: fadeInDown 1s;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-section p {
+      font-size: 1.3em;
+      margin-bottom: 30px;
+      animation: fadeIn 1.5s;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .hero-section button {
+      padding: 15px 40px;
+      font-size: 1.2em;
+      background: #fff;
+      color: #6d4c41;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: all 0.3s;
+      animation: fadeInUp 2s;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-section button:hover {
+      background: #ffccbc;
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    .featured-section {
+      padding: 60px 20px;
+      background: #fff;
+    }
+
+    .featured-section h2 {
+      text-align: center;
+      color: #3e2723;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .featured-card {
+      background: #f5e6d3;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    .featured-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .featured-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .featured-card-content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .featured-card h3 {
+      color: #3e2723;
+      margin: 10px 0;
+      font-size: 1.5em;
+    }
+
+    .featured-card p {
+      color: #5d4037;
+      margin: 10px 0;
+    }
+
+    .featured-card .price {
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #6d4c41;
+      margin: 15px 0;
+    }
+
+    .testimonials-section {
+      padding: 60px 20px;
+      background: linear-gradient(to bottom, #f5e6d3, #fff);
+      text-align: center;
+    }
+
+    .testimonials-section h2 {
+      color: #3e2723;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+
+    .testimonial-card {
+      background: white;
+      padding: 30px;
+      margin: 20px auto;
+      max-width: 600px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-left: 5px solid #6d4c41;
+      transition: all 0.3s;
+    }
+
+    .testimonial-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    .testimonial-card p {
+      font-style: italic;
+      color: #5d4037;
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
+
+    .testimonial-author {
+      font-weight: bold;
+      color: #6d4c41;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🍫 Chocolate Haven</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Chocolates</a>
+    <a href="cart.html">Cart</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="hero-section">
+  <h2>Welcome to Chocolate Heaven!</h2>
+  <p>Indulge in handcrafted artisan chocolates for every special moment</p>
+  <a href="products.html"><button>Explore Our Collection</button></a>
+</section>
+
+<section class="featured-section">
+  <h2>✨ Featured Chocolates</h2>
+  <div class="featured-grid">
+    <div class="featured-card" onclick="window.location.href='products.html'">
+      <img src="https://images.unsplash.com/photo-1511381939415-e44015466834?w=400&h=300&fit=crop" alt="Dark Chocolate Truffles">
+      <div class="featured-card-content">
+        <h3>Dark Chocolate Truffles</h3>
+        <p>Rich, velvety dark chocolate with a smooth ganache center</p>
+        <div class="price">₹550</div>
+      </div>
+    </div>
+
+    <div class="featured-card" onclick="window.location.href='products.html'">
+      <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=400&h=300&fit=crop" alt="Milk Chocolate Pralines">
+      <div class="featured-card-content">
+        <h3>Milk Chocolate Pralines</h3>
+        <p>Creamy milk chocolate with crunchy hazelnut praline</p>
+        <div class="price">₹450</div>
+      </div>
+    </div>
+
+    <div class="featured-card" onclick="window.location.href='products.html'">
+      <img src="https://images.unsplash.com/photo-1548848292-6d85e1a88f6c?w=400&h=300&fit=crop" alt="Assorted Gift Box">
+      <div class="featured-card-content">
+        <h3>Assorted Gift Box</h3>
+        <p>A perfect collection of our finest chocolates</p>
+        <div class="price">₹750</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials-section">
+  <h2>💬 What Our Customers Say</h2>
+  <div class="testimonial-card">
+    <p>"Best chocolates ever! Rich, smooth, and absolutely delicious. Every bite is pure bliss!"</p>
+    <div class="testimonial-author">- Anjali M.</div>
+  </div>
+  <div class="testimonial-card">
+    <p>"My kids loved the chocolate gift box! Perfect for birthdays and celebrations."</p>
+    <div class="testimonial-author">- Rohit S.</div>
+  </div>
+  <div class="testimonial-card">
+    <p>"Fast delivery and amazing taste! The dark truffles are my absolute favorite."</p>
+    <div class="testimonial-author">- Priya K.</div>
+  </div>
+</section>
+
+</body>
+</html>
