@@ -1,13 +1,13 @@
 // Products data
 const products = [
-  {name: "Dark Chocolate", price: 200, flavor:"dark", image:"img/dark.jpg"},
-  {name: "Milk Chocolate", price: 180, flavor:"milk", image:"img/milk.jpeg"},
-  {name: "Chocolate Truffles", price: 300, flavor:"dark", image:"img/truffle.jpeg"},
-  {name: "Chocolate Cupcake", price: 150, flavor:"milk", image:"img/cup.jpeg"},
-  {name: "Gift Box", price: 500, flavor:"all", image:"img/gift.jpeg"},
-  {name: "Assorted Chocolates", price: 400, flavor:"all", image:"img/assorted.jpeg"},
-  {name: "Chocolate Cookies", price: 100, flavor:"milk", image:"img/cookies.jpeg"},
-  {name: "Hot Chocolate", price: 120, flavor:"milk", image:"img/hot.jpeg"},
+  {name: "Dark Chocolate", price: 200, flavor:"dark", image:"dark.jpg"},
+  {name: "Milk Chocolate", price: 180, flavor:"milk", image:"milk.jpeg"},
+  {name: "Chocolate Truffles", price: 300, flavor:"dark", image:"truffle.jpeg"},
+  {name: "Chocolate Cupcake", price: 150, flavor:"milk", image:"cup.jpeg"},
+  {name: "Gift Box", price: 500, flavor:"all", image:"gift.jpeg"},
+  {name: "Assorted Chocolates", price: 400, flavor:"all", image:"assorted.jpeg"},
+  {name: "Chocolate Cookies", price: 100, flavor:"milk", image:"cookies.jpeg"},
+  {name: "Hot Chocolate", price: 120, flavor:"milk", image:"hot.jpeg"},
 ];
 
 // Load cart
