@@ -1,0 +1,68 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #fff8f5;
+    color: #333;
+}
+
+/* Navbar */
+header {
+    width: 100%;
+    padding: 20px;
+    background: #4e2c20;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 16px;
+}
+
+nav a:hover, nav .active {
+    color: #ffcc66;
+}
+
+/* Home Banner */
+.hero {
+    background: url("img/cake.jpg") center/cover no-repeat;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    animation: fadeIn 1.5s ease;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-top: 10px;
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: tra
