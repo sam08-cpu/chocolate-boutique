@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ChocoBliss 
-  Home</title>
+<title>ChocoBliss - Home</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<!-- Header / Navbar -->
 <header>
   <a href="index.html" class="logo">ChocoBliss</a>
   <nav>
@@ -19,21 +20,55 @@
   </nav>
 </header>
 
+<!-- Hero Section -->
 <section class="hero">
   <h1>Delicious Handmade Chocolates</h1>
-  <p>Indulge in premium, rich, and creamy chocolates crafted with love.</p>
+  <p>Indulge in premium chocolates crafted with love.</p>
   <a href="products.html" class="btn">Shop Now</a>
 </section>
 
+<!-- Search + Filter -->
+<section class="filter-bar">
+  <input type="text" id="search" placeholder="Search chocolates..." onkeyup="searchProducts()">
+  <select id="filter-flavor" onchange="filterProducts()">
+    <option value="all">All Flavors</option>
+    <option value="dark">Dark</option>
+    <option value="milk">Milk</option>
+    <option value="white">White</option>
+  </select>
+</section>
+
+<!-- Products Section -->
+<section class="products-container" id="product-list">
+  <!-- Products will be loaded dynamically by script.js -->
+</section>
+
+<!-- Testimonials -->
 <section class="testimonials">
   <h2>What Our Customers Say</h2>
   <div class="testimonial-box">
-    <div class="testimonial"><p>“Best chocolates ever! Melts in the mouth.”</p><span>- Aisha</span></div>
-    <div class="testimonial"><p>“Amazing packaging and fast delivery!”</p><span>- Rahul</span></div>
-    <div class="testimonial"><p>“My go-to place for gifting premium chocolates.”</p><span>- Sneha</span></div>
+    <div class="testimonial">
+      <p>“Best chocolates ever! Melts in the mouth.”</p>
+      <span>- Aisha</span>
+    </div>
+    <div class="testimonial">
+      <p>“Amazing packaging and fast delivery!”</p>
+      <span>- Rahul</span>
+    </div>
+    <div class="testimonial">
+      <p>“My go-to place for gifting premium chocolates.”</p>
+      <span>- Sneha</span>
+    </div>
   </div>
 </section>
 
+<!-- Footer -->
+<footer>
+  <p>© 2025 ChocoBliss. All rights reserved.</p>
+</footer>
+
+<!-- JS -->
 <script src="script.js"></script>
+
 </body>
 </html>
