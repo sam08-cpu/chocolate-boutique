@@ -43,7 +43,7 @@ nav a:hover, nav .active {
 
 /* Home Banner */
 .hero {
-    background: url("img/cake.jpg") center/cover no-repeat;
+    background: url("cake.jpeg") center/cover no-repeat;
     height: 70vh;
     display: flex;
     align-items: center;
