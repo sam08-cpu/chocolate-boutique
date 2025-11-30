@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart - ChocoBliss</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">ChocoBliss</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="cart-page">
+    <h1>Your Shopping Cart</h1>
+    <div id="cart-items" class="cart-items"></div>
+    
+    <h2>Total: ₹<span id="total-price">0</span></h2>
+
+    <a class="checkout-btn" href="payment.html">Proceed to Checkout</a>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
