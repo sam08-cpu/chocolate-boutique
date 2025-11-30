@@ -1,6 +1,6 @@
 // Products data
 const products = [
-  {name: "Dark Chocolate", price: 200, flavor:"dark", image:"dark.jpg"},
+  {name: "Dark Chocolate", price: 200, flavor:"dark", image:"dark.jpeg"},
   {name: "Milk Chocolate", price: 180, flavor:"milk", image:"milk.jpeg"},
   {name: "Chocolate Truffles", price: 300, flavor:"dark", image:"truffle.jpeg"},
   {name: "Chocolate Cupcake", price: 150, flavor:"milk", image:"cup.jpeg"},
