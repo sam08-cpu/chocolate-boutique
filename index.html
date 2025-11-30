@@ -1,266 +1,367 @@
+<!-- ========================= CHOCOLATE SHOP - INDEX.HTML ========================= -->
+<!-- Homepage with hero, testimonials, featured products, logo, animations -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chocolate Haven - Home</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    .hero-section {
-      background: linear-gradient(135deg, #3e2723 0%, #6d4c41 50%, #8d6e63 100%);
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-section::before {
-      content: '🍫';
-      position: absolute;
-      font-size: 200px;
-      opacity: 0.1;
-      top: -50px;
-      right: -50px;
-      animation: float 6s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-    }
-
-    .hero-section h2 {
-      font-size: 3em;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-      animation: fadeInDown 1s;
-    }
-
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .hero-section p {
-      font-size: 1.3em;
-      margin-bottom: 30px;
-      animation: fadeIn 1.5s;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    .hero-section button {
-      padding: 15px 40px;
-      font-size: 1.2em;
-      background: #fff;
-      color: #6d4c41;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      font-weight: bold;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      transition: all 0.3s;
-      animation: fadeInUp 2s;
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .hero-section button:hover {
-      background: #ffccbc;
-      transform: scale(1.1);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    }
-
-    .featured-section {
-      padding: 60px 20px;
-      background: #fff;
-    }
-
-    .featured-section h2 {
-      text-align: center;
-      color: #3e2723;
-      font-size: 2.5em;
-      margin-bottom: 40px;
-    }
-
-    .featured-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .featured-card {
-      background: #f5e6d3;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-      transition: all 0.3s;
-      cursor: pointer;
-    }
-
-    .featured-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    }
-
-    .featured-card img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-    }
-
-    .featured-card-content {
-      padding: 20px;
-      text-align: center;
-    }
-
-    .featured-card h3 {
-      color: #3e2723;
-      margin: 10px 0;
-      font-size: 1.5em;
-    }
-
-    .featured-card p {
-      color: #5d4037;
-      margin: 10px 0;
-    }
-
-    .featured-card .price {
-      font-size: 1.4em;
-      font-weight: bold;
-      color: #6d4c41;
-      margin: 15px 0;
-    }
-
-    .testimonials-section {
-      padding: 60px 20px;
-      background: linear-gradient(to bottom, #f5e6d3, #fff);
-      text-align: center;
-    }
-
-    .testimonials-section h2 {
-      color: #3e2723;
-      font-size: 2.5em;
-      margin-bottom: 40px;
-    }
-
-    .testimonial-card {
-      background: white;
-      padding: 30px;
-      margin: 20px auto;
-      max-width: 600px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      border-left: 5px solid #6d4c41;
-      transition: all 0.3s;
-    }
-
-    .testimonial-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-    }
-
-    .testimonial-card p {
-      font-style: italic;
-      color: #5d4037;
-      font-size: 1.1em;
-      margin-bottom: 10px;
-    }
-
-    .testimonial-author {
-      font-weight: bold;
-      color: #6d4c41;
-      font-size: 1em;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chocolate Heaven | Home</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
+  <header class="navbar">
+    <div class="logo">🍫 Chocolate Heaven</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="payment.html">Payment</a>
+    </nav>
+    <div class="cart-icon">🛒 <span id="cart-count">0</span></div>
+  </header>
 
+  <section class="hero">
+    <h1 class="animate">Premium Handmade Chocolates</h1>
+    <p>Fresh • Organic • Melt-in-mouth</p>
+  </section>
+
+  <section class="featured-products">
+    <h2>Best Sellers</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1549007994-cb82fe5e8f32" />
+        <h3>Dark Chocolate Truffle</h3>
+        <p>₹299</p>
+        <button onclick="addToCart('Dark Chocolate Truffle',299)">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1606312619070-d29f56c70f81" />
+        <h3>Hazelnut Delight</h3>
+        <p>₹349</p>
+        <button onclick="addToCart('Hazelnut Delight',349)">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1588167108709-8f4f3f0f5f8b" />
+        <h3>Belgian Caramel</h3>
+        <p>₹399</p>
+        <button onclick="addToCart('Belgian Caramel',399)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-box">
+      <p>“The best chocolates I’ve ever tasted!” – Aisha</p>
+    </div>
+    <div class="testimonial-box">
+      <p>“Fast delivery and premium quality!” – Rohan</p>
+    </div>
+    <div class="testimonial-box">
+      <p>“Love the flavours and packaging!” – Meera</p>
+    </div>
+  </section>
+</body>
+</html>
+
+
+<!-- ========================= PRODUCTS.HTML ========================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chocolate Heaven | Products</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">🍫 Chocolate Heaven</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="payment.html">Payment</a>
+    </nav>
+    <div class="cart-icon">🛒 <span id="cart-count">0</span></div>
+  </header>
+
+  <section class="search-filter">
+    <input type="text" id="search" placeholder="Search chocolates..." onkeyup="searchProducts()" />
+
+    <select id="filter" onchange="filterProducts()">
+      <option value="all">All</option>
+      <option value="dark">Dark Chocolate</option>
+      <option value="milk">Milk Chocolate</option>
+      <option value="nuts">Nutty</option>
+    </select>
+  </section>
+
+  <section class="product-grid" id="product-list">
+    <!-- Example Product Cards -->
+    <div class="product-card" data-category="dark">
+      <img src="https://images.unsplash.com/photo-1549007994-cb82fe5e8f32" />
+      <h3>Dark Chocolate Truffle</h3>
+      <p>₹299</p>
+      <button onclick="addToCart('Dark Chocolate Truffle',299)">Add to Cart</button>
+    </div>
+
+    <div class="product-card" data-category="milk">
+      <img src="https://images.unsplash.com/photo-1606312619070-d29f56c70f81" />
+      <h3>Hazelnut Milk Bar</h3>
+      <p>₹249</p>
+      <button onclick="addToCart('Hazelnut Milk Bar',249)">Add to Cart</button>
+    </div>
+
+    <div class="product-card" data-category="nuts">
+      <img src="https://images.unsplash.com/photo-1588167108709-8f4f3f0f5f8b" />
+      <h3>Crunchy Almond Rocks</h3>
+      <p>₹199</p>
+      <button onclick="addToCart('Crunchy Almond Rocks',199)">Add to Cart</button>
+    </div>
+  </section>
+</body>
+</html>
+
+
+<!-- ========================= ABOUT.HTML ========================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chocolate Heaven | About</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">🍫 Chocolate Heaven</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="payment.html">Payment</a>
+    </nav>
+  </header>
+
+  <section class="about">
+    <h2>About Us</h2>
+    <p>We handcraft premium chocolates using organic ingredients sourced from the finest farms.</p>
+  </section>
+</body>
+</html>
+
+
+<!-- ========================= PAYMENT.HTML ========================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chocolate Heaven | Payment</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">🍫 Chocolate Heaven</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="payment.html">Payment</a>
+    </nav>
+  </header>
+
+  <section class="payment-box">
+    <h2>Checkout</h2>
+    <div id="order-summary"></div>
+
+    <form>
+      <input type="text" placeholder="Full Name" required />
+      <input type="text" placeholder="Address" required />
+      <input type="number" placeholder="Phone Number" required />
+      <button type="submit">Pay Now</button>
+    </form>
+  </section>
+</body>
+</html>
+
+
+<!-- ========================= STYLES.CSS ========================= -->
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #fff8f2;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: #4b2e2e;
+  color: white;
+  padding: 15px;
+}
+.navbar a {
+  color: white;
+  margin: 0 10px;
+}
+.hero {
+  text-align: center;
+  padding: 80px;
+  background: url('https://images.unsplash.com/photo-1497051788611-2c64812349a0') no-repeat center/cover;
+  color: white;
+}
+.animate {
+  animation: fadeIn 2s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.product-card {
+  background: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+}
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+.testimonials {
+  background: #f2e3da;
+  padding: 30px;
+  text-align: center;
+}
+.testimonial-box {
+  background: white;
+  margin: 10px auto;
+  padding: 15px;
+  width: 60%;
+  border-radius: 10px;
+}
+.payment-box {
+  width: 60%;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+}
+</style>
+
+
+<!-- ========================= SCRIPT.JS ========================= -->
+<script>
+let cart = JSON.parse(localStorage.getItem('choco_cart_v1')) || [];
+
+function saveCart() {
+  localStorage.setItem('choco_cart_v1', JSON.stringify(cart));
+  document.getElementById('cart-count').innerText = cart.length;
+}
+
+function addToCart(name, price) {
+  cart.push({ name, price });
+  saveCart();
+  alert(name + " added to cart!");
+}
+
+saveCart();
+</script>
+
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact Us - Choco Bliss</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 <header>
-  <h1>🍫 Chocolate Haven</h1>
+  <a href="index.html" class="logo">ChocoBliss</a>
   <nav>
     <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
     <a href="about.html">About</a>
-    <a href="products.html">Chocolates</a>
-    <a href="cart.html">Cart</a>
-    <a href="contact.html">Contact</a>
+    <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
   </nav>
 </header>
-
-<section class="hero-section">
-  <h2>Welcome to Chocolate Heaven!</h2>
-  <p>Indulge in handcrafted artisan chocolates for every special moment</p>
-  <a href="products.html"><button>Explore Our Collection</button></a>
+<section class="contact-section">
+  <h1>Contact Us</h1>
+  <form class="contact-form">
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
 </section>
+<script src="script.js"></script>
+</body>
+</html>
 
-<section class="featured-section">
-  <h2>✨ Featured Chocolates</h2>
-  <div class="featured-grid">
-    <div class="featured-card" onclick="window.location.href='products.html'">
-      <img src="https://images.unsplash.com/photo-1511381939415-e44015466834?w=400&h=300&fit=crop" alt="Dark Chocolate Truffles">
-      <div class="featured-card-content">
-        <h3>Dark Chocolate Truffles</h3>
-        <p>Rich, velvety dark chocolate with a smooth ganache center</p>
-        <div class="price">₹550</div>
-      </div>
-    </div>
-
-    <div class="featured-card" onclick="window.location.href='products.html'">
-      <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=400&h=300&fit=crop" alt="Milk Chocolate Pralines">
-      <div class="featured-card-content">
-        <h3>Milk Chocolate Pralines</h3>
-        <p>Creamy milk chocolate with crunchy hazelnut praline</p>
-        <div class="price">₹450</div>
-      </div>
-    </div>
-
-    <div class="featured-card" onclick="window.location.href='products.html'">
-      <img src="https://images.unsplash.com/photo-1548848292-6d85e1a88f6c?w=400&h=300&fit=crop" alt="Assorted Gift Box">
-      <div class="featured-card-content">
-        <h3>Assorted Gift Box</h3>
-        <p>A perfect collection of our finest chocolates</p>
-        <div class="price">₹750</div>
-      </div>
-    </div>
-  </div>
+<!-- cart.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Your Cart - Choco Bliss</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <a href="index.html" class="logo">ChocoBliss</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="about.html">About</a>
+    <a href="payment.html">Checkout</a>
+  </nav>
+</header>
+<section class="cart-page">
+  <h1>Your Cart</h1>
+  <div id="cart-items"></div>
+  <h2>Total: ₹<span id="total-price">0</span></h2>
+  <a class="checkout-btn" href="payment.html">Proceed to Payment</a>
 </section>
+<script src="script.js"></script>
+</body>
+</html>
 
-<section class="testimonials-section">
-  <h2>💬 What Our Customers Say</h2>
-  <div class="testimonial-card">
-    <p>"Best chocolates ever! Rich, smooth, and absolutely delicious. Every bite is pure bliss!"</p>
-    <div class="testimonial-author">- Anjali M.</div>
-  </div>
-  <div class="testimonial-card">
-    <p>"My kids loved the chocolate gift box! Perfect for birthdays and celebrations."</p>
-    <div class="testimonial-author">- Rohit S.</div>
-  </div>
-  <div class="testimonial-card">
-    <p>"Fast delivery and amazing taste! The dark truffles are my absolute favorite."</p>
-    <div class="testimonial-author">- Priya K.</div>
-  </div>
+<!-- order.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Order Summary - Choco Bliss</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <a href="index.html" class="logo">ChocoBliss</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+<section class="order-summary">
+  <h1>Order Placed Successfully 🎉</h1>
+  <p>Thank you for your purchase! Below is your order summary:</p>
+  <div id="order-details"></div>
+  <a href="index.html" class="back-home">Back to Home</a>
 </section>
-
+<script src="script.js"></script>
 </body>
 </html>
