@@ -1,49 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Choco Bliss - Products</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChocoBliss - Products</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <a href="index.html" class="logo">ChocoBliss</a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="about.html">About</a>
-      <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+<header>
+  <a href="index.html" class="logo">ChocoBliss</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html" class="active">Products</a>
+    <a href="about.html">About</a>
+    <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-  <section class="product-page">
-    <h1>Our Premium Chocolates</h1>
+<section class="filter-bar">
+  <input type="text" id="search" placeholder="Search chocolates..." onkeyup="searchProducts()">
+  <select id="filter-flavor" onchange="filterProducts()">
+    <option value="all">All Flavors</option>
+    <option value="dark">Dark</option>
+    <option value="milk">Milk</option>
+    <option value="white">White</option>
+  </select>
+</section>
 
-    <div class="filters">
-      <input type="text" id="search" placeholder="Search chocolates..." />
+<section class="products-container" id="product-list">
+  <!-- Products loaded dynamically by JS -->
+</section>
 
-      <select id="filter-flavor">
-        <option value="all">All Flavors</option>
-        <option value="dark">Dark</option>
-        <option value="milk">Milk</option>
-        <option value="white">White</option>
-      </select>
-
-      <select id="filter-price">
-        <option value="all">All Prices</option>
-        <option value="0-200">Below ₹200</option>
-        <option value="200-500">₹200 - ₹500</option>
-        <option value="500+">Above ₹500</option>
-      </select>
-    </div>
-
-    <div class="product-grid" id="product-list">
-      <!-- Products loaded by script.js -->
-    </div>
-  </section>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
