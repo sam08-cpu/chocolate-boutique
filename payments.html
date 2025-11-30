@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment - ChocoBliss</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">ChocoBliss</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="payment-section">
+    <h1>Checkout</h1>
+
+    <div class="payment-container">
+      <div class="payment-form">
+        <h2>Billing Details</h2>
+        <input type="text" placeholder="Full Name" required>
+        <input type="text" placeholder="Address" required>
+        <input type="text" placeholder="City" required>
+        <input type="text" placeholder="Pincode" required>
+        <input type="text" placeholder="Phone Number" required>
+
+        <h2>Payment Details</h2>
+        <input type="text" placeholder="Card Number" required>
+        <input type="text" placeholder="Expiry Date" required>
+        <input type="text" placeholder="CVV" required>
+
+        <a href="order.html" class="place-order">Place Order</a>
+      </div>
+
+      <div class="order-summary-box">
+        <h2>Your Order</h2>
+        <div id="order-items"></div>
+        <h3>Total: ₹<span id="summary-total">0</span></h3>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
