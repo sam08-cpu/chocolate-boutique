@@ -65,4 +65,162 @@ nav a:hover, nav .active {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: tra
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Product Section */
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.product {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: .3s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product button {
+    width: 100%;
+    padding: 10px;
+    background: #4e2c20;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.product button:hover {
+    background: #ffcc66;
+    color: black;
+}
+
+/* Search + Filters */
+.filter-bar {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.filter-bar input, .filter-bar select {
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Cart Page */
+.cart-container {
+    padding: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.cart-item img {
+    width: 120px;
+    border-radius: 10px;
+}
+
+.cart-details {
+    margin-left: 20px;
+}
+
+.total-box {
+    padding: 20px;
+    background: #4e2c20;
+    color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 40px;
+    background: #fff2e6;
+}
+
+.testimonials h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.testimonial-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.testimonial {
+    width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Contact Page */
+.contact-container {
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+}
+
+.contact-form {
+    width: 60%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.contact-info {
+    width: 35%;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    padding: 20px;
+    background: #4e2c20;
+    color: white;
+    text-align: center;
+}
