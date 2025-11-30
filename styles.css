@@ -9,8 +9,8 @@
 }
 
 body {
-    background: #fff8f5;
-    color: #333;
+    background: #f2e6dc;
+    color: #222;
 }
 
 /* Navbar */
@@ -43,19 +43,29 @@ nav a:hover, nav .active {
 
 /* Home Banner */
 .hero {
-    background: url("cake.jpeg") center/cover no-repeat;
+    position: relative;
+    background: url("img/cake.jpg") center/cover no-repeat;
     height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
     padding: 20px;
+    color: #fff; /* white text */
 }
 
-.hero h1 {
-    font-size: 50px;
-    animation: fadeIn 1.5s ease;
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5); /* dark overlay */
+    z-index: 1;
+}
+
+.hero h1, .hero p, .hero a {
+    position: relative;
+    z-index: 2;
 }
 
 .hero p {
@@ -97,18 +107,14 @@ nav a:hover, nav .active {
 }
 
 .product button {
-    width: 100%;
-    padding: 10px;
     background: #4e2c20;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
+    color: #fff;
+    transition: 0.3s;
 }
 
 .product button:hover {
-    background: #ffcc66;
-    color: black;
+    background: #ffcc66; /* golden chocolate accent */
+    color: #000;
 }
 
 /* Search + Filters */
